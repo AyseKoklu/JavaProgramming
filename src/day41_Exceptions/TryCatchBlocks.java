@@ -6,12 +6,12 @@ public class TryCatchBlocks {
 
         System.out.println("Test started");
 
-        try{
+        try {
 
-            System.out.println(9/0);
+            System.out.println(9 / 0);
             System.out.println("Try Block");
 
-        }catch(ArithmeticException e){
+        } catch (ArithmeticException e) {
 
             System.out.println("Catch Block");
             System.out.println("Arithmetic Exception was occurred");
@@ -25,22 +25,49 @@ public class TryCatchBlocks {
 
         System.out.println("Test 2 started");
 
-        int[] numbers = {1,2,3,4,5};
+        int[] numbers = {1, 2, 3, 4, 5};
 
-        try{
+        try {
 
             System.out.println(numbers[200]);
             System.out.println("Try Block");
 
-        }catch(RuntimeException e){
+        } catch (RuntimeException e) {
 
-            System.out.println("Catch Block");
-            System.out.println("Runtime Exception was occurred");
+            e.printStackTrace();
+            System.out.println(e.getMessage());
 
         }
 
-
         System.out.println("Test 2 completed");
+
+        System.out.println("--------------------------");
+
+        System.out.println("Test 3 started");
+
+        try {
+
+            System.out.println("Cydeo".substring(2, 0));
+            System.out.println("Try Block");
+
+        } catch (RuntimeException e) {
+
+            e.printStackTrace();
+
+        }
+
+        System.out.println("Test 3 completed");
+
+        System.out.println("--------------------------");
+
+        System.out.println("Hello");
+
+        try {
+            Thread.sleep(3000);
+        } catch (InterruptedException e) {
+
+        }
+        System.out.println("Cydeo");
 
     }
 
