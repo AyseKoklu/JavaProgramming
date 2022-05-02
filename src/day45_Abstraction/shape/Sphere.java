@@ -1,7 +1,7 @@
 package day45_Abstraction.shape;
 
-public class Cube extends Shape implements Volume{
-    public Cube(String name) {
+public class Sphere extends Shape implements Volume{
+    public Sphere(String name) {
         super(name);
     }
 
