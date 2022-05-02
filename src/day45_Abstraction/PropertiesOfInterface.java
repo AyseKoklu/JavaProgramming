@@ -24,11 +24,27 @@ public interface PropertiesOfInterface {
     }
      */
 
-    public static void method2(){
+    static void method2() {
         System.out.println("Static method"); // static method
     }
 
-    public abstract void method3(); // abstract method
+    void method3(); // abstract method
+
+    default void method4() { // default method
+        System.out.println("Default method");
+    }
+
+    class Test implements PropertiesOfInterface{
+        @Override
+        public void method3() {
+
+        }
+
+        public static void main(String[] args) {
+            new Test().method4();
+        }
+
+    }
 
 
 }
