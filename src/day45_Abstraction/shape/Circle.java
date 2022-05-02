@@ -15,7 +15,7 @@ public class Circle extends Shape {
     }
 
     public void setRadius(double radius) {
-        if (radius < 0) {
+        if (radius <= 0) {
             throw new RuntimeException("Invalid Radius = " + radius);
         }
         this.radius = radius;
@@ -29,5 +29,13 @@ public class Circle extends Shape {
     @Override
     public double perimeter() {
         return 2 * radius * pi;
+    }
+
+    @Override
+    public String toString() {
+        return "Circle{" +
+                super.toString() +
+                ", radius='" + area() + '\'' +
+                '}';
     }
 }
