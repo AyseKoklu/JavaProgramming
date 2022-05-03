@@ -1,6 +1,6 @@
 package day45_Abstraction.shape;
 
-public class Square extends Shape{
+public final class Square extends Shape{
 
     private double side;
 
