@@ -60,7 +60,7 @@ public class ReferenceTypeCastings {
 
         //  ( (Tester)employee ).unitTest();
 
-        //  ( (Developer)employee ).unitTest();
+        //  ( (Developer)employee ).unitTest(); --->>> ClassCastException
 
         //  Driver driver = (Driver) employee;  // line 1
         Person person = (Person) employee; // line 2
@@ -72,7 +72,7 @@ public class ReferenceTypeCastings {
         s1.area();
         s1.perimeter();
 
-        //  ( (Cube)s1 ).volume();
+        //  ( (Cube)s1 ).volume(); --->>> ClassCastException
 
 
 
