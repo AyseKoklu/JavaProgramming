@@ -5,6 +5,7 @@ import day43_Abstraction.employee.Employee;
 import day43_Abstraction.employee.Tester;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class PolymorphismPractice2 {
@@ -54,17 +55,50 @@ public class PolymorphismPractice2 {
 
         }
 
+        System.out.println(scrumMembers);
+        System.out.println(testers);
+        System.out.println(developers);
+
 
         System.out.println("-------------------------------------------------------");
 
-        Tester testerWithMaxSalary = testers.get(0);
-        Developer developerWithMaxSalary = developers.get(0);
+
+
+        double testerMaxSalary = testers.get(0).getSalary();
+        double developerMaxSalary = developers.get(0).getSalary();
 
 
 
+        for (Tester tester : testers) {
+            if(tester.getSalary() > testerMaxSalary){
+                testerMaxSalary = tester.getSalary();
+                System.out.println(tester);
+            }
+
+        }
+
+        for (Tester tester : testers) {
+            if(testerMaxSalary == tester.getSalary()){
+                System.out.println(tester);
+            }
+        }
+
+
+        for (Developer developer : developers) {
+            if(developer.getSalary() > developerMaxSalary){
+                developerMaxSalary = developer.getSalary();
+            }
+        }
+
+        for (Developer developer : developers) {
+            if(developerMaxSalary == developer.getSalary()){
+                System.out.println(developer);
+            }
+        }
 
 
     }
+
 
 }
 
