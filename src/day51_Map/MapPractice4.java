@@ -1,9 +1,6 @@
 package day51_Map;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Map;
-import java.util.TreeMap;
+import java.util.*;
 
 public class MapPractice4 {
     public static void main(String[] args) {
@@ -22,11 +19,12 @@ public class MapPractice4 {
                 "Nurcan", "Raika", "Igor", "Elif", "Sana", "Azamat"));
         ArrayList<String> group9 = new ArrayList<>(Arrays.asList("Alex", "Ali", "Andriy", "Cassandra", "Sevgul",
                 "Olha", "Tito", "Ozan", "Serkan", "Furkan", "Madina", "Muharrem"));
-        ArrayList<String> group24 = new ArrayList<>(Arrays.asList("Maria", "Kristina", "Amin", "George", "Layan", "Amin", "Yulia", "George", "Ayanle", "Maxim", "Nermin", "Doughlas"));
-        ArrayList<String> group5 = new ArrayList<>(Arrays.asList("Nazar", "Veronika", "Mikael", "Layla", "Badmaa", "Zaeir", "Anna", "Tamara", "Eugene"));
+        ArrayList<String> group24 = new ArrayList<>(Arrays.asList("Maria", "Kristina", "Amin", "George", "Layan",
+                "Amin", "Yulia", "George", "Ayanle", "Maxim", "Nermin", "Doughlas"));
+        ArrayList<String> group5 = new ArrayList<>(Arrays.asList("Nazar", "Veronika", "Mikael", "Layla", "Badmaa",
+                "Zaeir", "Anna", "Tamara", "Eugene"));
 
-
-        // pair: Id & names of students
+        // pair: ID & names of students
 
         Map<Integer, ArrayList<String>> groups = new TreeMap<>();
         groups.put(1, group1);
@@ -35,6 +33,7 @@ public class MapPractice4 {
         groups.put(24, group24);
         groups.put(5, group5);
 
+        System.out.println("group size : " + groups.size());
         System.out.println(groups);
 
         /*
@@ -43,7 +42,8 @@ public class MapPractice4 {
         }
         */
 
-        System.out.println(groups.get(2).get(1));
+        System.out.println(groups.get(2).get(1)); // one element from a group
+        System.out.println(groups.get(2).get(1).charAt(4)); // specific character
 
 
         System.out.println("------------------------------------------------");
@@ -54,7 +54,5 @@ public class MapPractice4 {
             }
         }
 
-
     }
-
 }
